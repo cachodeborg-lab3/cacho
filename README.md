@@ -1,8 +1,6 @@
 # IA en Metrología: Uso de modelos de lenguaje de gran tamaño (LLM) y aplicaciones en Metrología
 
-El seminario se centrará en la exploración de las posibles aplicaciones de la inteligencia artificial, con un enfoque específico en los modelos de lenguaje de gran tamaño (LLMs, por sus siglas en inglés), y cómo estos pueden ser aprovechados por los metrólogos en su trabajo diario. Durante el seminario, se presentará una aplicación dedicada a la revisión de informes de calibración, que demuestra el potencial de los LLMs para llevar adelante esta tarea. Además, se discutirán otras aplicaciones desarrolladas tanto a nivel local como por terceros, las cuales podrían ser utilizadas por la comunidad metrológica, con el fin de optimizar tareas.
-
-  
+ 
 
 # 🧠 **Línea de tiempo del desarrollo de la Inteligencia Artificial**
 
@@ -733,7 +731,101 @@ Cada caso de uso requiere una combinación específica de estas herramientas y a
 
 ![](https://t9013842807.p.clickup-attachments.com/t9013842807/0f5ffef5-9e17-416e-856a-f71792f080fc/image.png)
 
-  
+ Mas allá del uso inicial de los LLM - Herramientas - Tendencias
+
+⚙️🌟 1. RAG (Retrieval-Augmented Generation)
+"Cuando el modelo no sabe, ¡que busque!"
+¿Qué hace?
+RAG combina un modelo LLM con una base de datos de conocimiento externo. El modelo no "inventa" todo desde la nada, sino que primero recupera información relevante y luego genera la respuesta con eso.
+Ejemplo cotidiano:
+📚 Estás preparando una exposición sobre Marte. No te acordás los datos exactos, así que abrís tu carpeta de apuntes, leés rápido, y luego armás la presentación. Eso es RAG: buscar + redactar.
+Aplicación real:
+Chatbots que responden usando documentos de tu empresa.
+LLMs conectados a bases de datos científicas o manuales técnicos.
+🧠🧭 2. ReAct (Reason + Act)
+"Primero pienso, después actúo (como un buen detective)"
+¿Qué hace?
+El modelo combina razonamiento paso a paso con la capacidad de ejecutar acciones externas, como buscar en Google, hacer cálculos, o consultar una API.
+Ejemplo cotidiano:
+🤔 Querés saber cuánto tenés que pagar si dividís una cuenta en 3 con propina. Pensás:
+¿Cuánto fue la cuenta?
+¿Qué porcentaje dejo de propina?
+Ahora calculo.
+ Eso es ReAct.
+Aplicación real:
+Agentes conversacionales que resuelven problemas matemáticos o financieros.
+Sistemas que combinan pensamiento + acciones reales.
+🤖🪤 3. Agentes (Agents)
+"Un asistente que se manda solo a cumplir tareas complejas"
+¿Qué hace?
+Los agentes usan LLMs como cerebro, pero además tienen "herramientas" para hacer tareas: abrir archivos, mandar mails, buscar datos, llamar APIs, etc.
+Ejemplo cotidiano:
+💼 Le decís a tu asistente: “Reservame un vuelo barato a Mendoza, confirmame el hotel y avisale a mamá”. Si tu asistente lo hace todo solo, ¡es un agente!
+Aplicación real:
+AutoGPT, AgentGPT, CrewAI: hacen planes y los ejecutan.
+Automatización de tareas con múltiples pasos.
+🧩📂 4. LangChain / LlamaIndex (Frameworks de orquestación)
+"Un sistema para coordinar todo lo anterior"
+¿Qué hacen?
+Son marcos de trabajo que te ayudan a conectar LLMs con bases de datos, APIs, documentos, herramientas, etc.
+Ejemplo cotidiano:
+🎮 Es como una consola donde configurás a tu equipo: "Este hace búsquedas", "Este razona", "Este traduce", y todos trabajan juntos.
+Aplicación real:
+Chatbots personalizados con tu información.
+Flujos de trabajo inteligentes.
+💭📋 5. Prompt Engineering / Prompt Tuning
+"Cómo hablarle al modelo para que haga lo que querés"
+¿Qué hacen?
+Diseñar prompts efectivos es clave para lograr buenos resultados. A veces incluso se entrena al modelo con ejemplos de prompts ajustados (eso es tuning).
+Ejemplo cotidiano:
+🧑 “No me entiendes si te digo ‘hacé lo tuyo’, pero si te digo ‘hacé una lista de compras solo con verduras verdes para el almuerzo’, sí.”
+Aplicación real:
+Mejorar la calidad de respuestas.
+Interfaces donde el usuario no ve el prompt real, pero se ajusta “detrás del telón”.
+
+Otras:
+
+
+
+Técnica
+Explicación breve
+Ejemplo cotidiano
+Tool Use (Herramientas)
+El LLM usa cosas externas como calculadoras, traductores, o buscadores.
+Pedís ayuda a una app para convertir medidas mientras cocinás.
+Fine-Tuning / LoRA
+Se entrena al modelo con tus propios datos.
+Enseñás a tu asistente a hablar con modismos de tu ciudad.
+Function Calling
+El modelo puede llamar funciones específicas programadas.
+"Reservá turno" → llama a reservarTurno(fecha, persona).
+Memory (memoria contextual)
+El modelo recuerda interacciones pasadas.
+Tu asistente recuerda que odiás el cilantro 🌿.
+Chain-of-Thought
+El modelo razona paso a paso.
+Como hacer una multiplicación larga “con cuenta” en vez de mental.
+
+📜 Lista de preguntas realizadas (chatgpt4o)
+¿Podés hacerme una línea de tiempo con los principales hechos en el desarrollo de la inteligencia artificial hasta nuestros días?
+¿Podés darme un listado de terminología y definiciones explicadas de IA?
+¿Podés darme una explicación con ejemplos amenos de redes neuronales, capas, atención, transformers, MoE y demás elementos que conforman los actuales LLM?
+¿Podés explicarlo con ejemplos de fútbol?
+¿Podés hacerlo en forma de infografía futbolera?
+¿Podés darme un esquema de evolución de los LLM en cuanto a tamaño y rendimiento en tests de inteligencia, tanto de modelos pagos como open source?
+¿Podés generar un gráfico comparando los tamaños y rendimientos con naves de ciencia ficción?
+¿Podés darme una explicación de los conceptos de pre-training, fine-tuning, prompt engineering, prompt tuning con ejemplos de la vida cotidiana?
+¿Podés hacerlo en formato de infografía?
+¿Qué es lo que un LLM “hace” y lo que “no hace” en términos mundanos?
+¿Qué ejemplos de uso me darías para el área de ciencias y de la metrología en particular?
+¿Podés generar una infografía sobre eso?
+¿Qué otros programas similares a LLM Studio existen para implementar modelos LLM en forma local?
+¿Hay más?
+¿Podés agregar los links de acceso a todos?
+¿Cuáles son las herramientas y tendencias actuales en el ecosistema de generación de herramientas utilizando LLMs? (RAG, ReAct, agentes, MCP y otras) Explicadas con ejemplos cotidianos.
+¿Qué significa exactamente MCP servers?
+
+ 
 
   
 
